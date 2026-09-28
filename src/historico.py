@@ -17,6 +17,8 @@ class Historico:
         # Fornecido: C++ usa size_t; Python precisa rejeitar negativos.
         if limite < 0:
             raise ValueError("limite deve ser nao negativo")
-        # TODO 02: até limite leituras em nova lista, na ordem de chegada.
-        # Não remover elementos do histórico original.
-        return []
+        if limite == 0:
+            return []
+        if limite >= len(self._leituras):
+            return list(self._leituras)
+        return list(self._leituras[-limite:])

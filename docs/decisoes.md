@@ -34,7 +34,7 @@
 
 ## Evidências da entrega
 
-- Comando local, resultado e commit testado: `make test ETAPA=01` → `OK etapa 01 cumulativa (C++ e Python)`; commit `2a0f9ea` (etapa 01) e o commit da etapa 02.
+- Comando local, resultado e commit testado: `make test ETAPA=02` → `OK etapa 02 cumulativa (C++ e Python)`.
 - URL da execução de Actions desse commit: (preencher com o link da aba Actions do seu fork).
 - Um diagnóstico de falha encontrado e como o corrigiu: na primeira execução do `make test ETAPA=01`, as duas linguagens reprovavam porque `inserir`/`buscar` devolviam o marcador `false`/`None`. Corrigi usando `emplace`/`find` em C++ e verificação explícita + `get` em Python.
 - Limite observado dos testes: os testes cobrem contrato e fronteiras (duplicata, ausência, 0/2/100 últimas), mas não provam que o painel externo continua falando só com `Catalogo` — isso exige inspeção do diff e explicação.
